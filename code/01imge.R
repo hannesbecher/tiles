@@ -10,5 +10,5 @@ wgt <- rep(1, 10)
 samp <- sample(ff, size = n, replace = T, prob = wgt)
 ffString <- paste(samp, collapse=" ")
 oString <- "out.png"
-mString <- paste0("magick montage ", ffString, " -geometry +0+0 -border 0 ", oString)
+mString <- paste0("montage ", ffString, " -geometry +0+0 -border 0 ", oString)
 write(mString, "montage.sh")
